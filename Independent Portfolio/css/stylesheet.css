@@ -1,0 +1,387 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: 'white';
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+} 
+
+h1{
+  font-size: 70px;
+  line-height: 1;
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Champagne & Limousines';
+  animation-duration: 1s;
+  animation-name: slidein;
+  position: relative;
+  z-index: 2;
+
+  letter-spacing: .05em;
+  text-shadow: 
+  4px 4px 0px #8b3c4a, 
+  7px 7px 0px rgba(0, 0, 0, 0.2);
+  
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+  font-family: 'Champagne & Limousines';
+}
+
+h3{
+  font-size: 40px;
+  font-family: 'Champagne & Limousines';  
+  text-align: center;
+}
+.contact-form{
+  position: absolute;
+  left: 50%;
+  top: 550px
+ 
+}
+
+
+a:focus{
+  border: 2px black;
+}
+
+
+footer{
+  position: fixed;
+  bottom:0;
+  background-color: #f76d6d;
+  color: white;
+  font-family: 'Champagne & Limousines';
+  padding: 30px;
+  text-align: center;
+  left:0;
+  right:0;
+}
+
+
+.container{
+
+  grid-gap: 40px;
+  display: grid;
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  grid-template-columns: 50px, auto, 500px, auto, 50px;
+  width: 100vw; 
+}
+
+.pictures{
+    
+  grid-row: 4 / span 2;
+  grid-column: 3 / span 2;
+  padding-top:50px;
+  height:1200px;
+  font-family: 'Champagne & Limousines';
+  -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+  filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+  
+}
+.flip-card {
+  background-color: transparent;
+  grid-row: 4 / span 2;
+  grid-column: 3 / span 2;
+  padding-top:50px;
+  height:1200px;
+}
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+
+header{
+  background-attachment: fixed;
+  background-image: url(../images/header.jpg);
+  background-position: center;  
+  height: 200px;      
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+  position: relative;
+  top:20px;
+
+
+}
+
+header p{
+  color: black;
+  font-size: 20px;
+  padding: 0 50px;
+  text-align: center;
+  font-family: 'Champagne & Limousines';
+}
+
+.about-image{
+  /*Your code here */
+  grid-row: 3 / span 1;
+  grid-column: 1 / -1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+
+.text{
+  /*Your code here */
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;  
+  font-family: 'Champagne & Limousines';
+
+}
+
+.text-block{
+
+   /*Your code here */
+  align-self: center;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid  #e0f4f5;
+  padding: 30px;
+  border-radius: 50px 50px 50px 5px; 
+  font-family: 'Champagne & Limousines';
+
+}
+
+@media screen and (min-width: 320px) and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+  .nav .current{
+    background-color: #f76d6d;
+    padding: 1px;
+    padding-bottom: 25px;
+    color: white;
+  }
+
+  .skip a{
+    background-color: #f76d6d;
+    text-align: center;
+    padding: 6px;
+    position: absolute;
+    top:0px;
+    z-index: auto;
+  }
+
+  nav ul{
+    list-style-type: none;
+  }
+  
+  nav a{
+    color: black;
+    font-weight: bold;
+    
+  }
+  .header-image{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    top: 5px;
+    z-index: 0;
+
+  }
+ 
+  
+  
+}
+
+@media only screen and (min-device-width: 768px){
+  .nav{
+    background-color: #e0f4f5;
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    vertical-align: middle;
+    grid-row: 1 / span 3;
+    grid-column: 1 / -1;
+    font-family: 'Champagne & Limousines';
+  }
+  nav a:active, a:hover, a:focus {
+    background-color: #f76d6d;
+    padding: 5px;
+    color:#ffffff;
+    font-family: 'Champagne & Limousines';
+  }
+  .nav .current{
+    background-color: #f76d6d;
+    padding: 1px;
+    padding-bottom: 25px;
+    color: white;
+  }
+
+  nav ul{
+    list-style-type: none;
+  }
+  
+  nav li{
+  
+    display: inline-block;
+    padding-right: 20px;
+  
+  }
+  
+  nav a{
+    color: black;
+    font-weight: bold;
+    
+  }
+  header p{
+    color: white;
+    font-size: 40px;
+    padding: 0 100px;
+    text-align: center;
+    font-family: 'Champagne & Limousines';
+  }
+  .skip a{
+    background-color: #f76d6d;
+    text-align: center;
+    padding: 6px;
+    position: absolute;
+    top:0px;
+    z-index: auto;
+  }
+  .header-image{
+    position: absolute;
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+    top: 15px;
+    z-index: 0;
+  
+    animation-name: bounce;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes bounce {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+  }
+  
+}
+
+
+
+@media  only screen and (min-width: 800px)/*DESKTOP*/{
+
+  .container{
+    /*Your code here */
+    display: grid;
+    grid-template-rows: 10px 300px 100px 100px 100px 100px 100px;
+    grid-template-columns: 50px auto 50px auto 50px;
+
+  }
+
+  .nav{
+    background-color: #e0f4f5;
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    vertical-align: middle;
+    grid-row: 1 / span 3;
+    grid-column: 1 / -1;
+    font-family: 'Champagne & Limousines';
+  }
+  nav a:active, a:hover, a:focus {
+    background-color: #f76d6d;
+    padding: 5px;
+    color:#ffffff;
+    font-family: 'Champagne & Limousines';
+
+  }
+  nav ul{
+    list-style-type: none;
+  }
+  
+  nav li{
+  
+    display: inline-block;
+    padding-right: 20px;
+  
+  }
+  .nav .current{
+    background-color: #f76d6d;
+    padding: 5px;
+    padding-bottom: 25px;
+    color: white;
+  }
+  
+  nav a{
+    color: black;
+    font-weight: bold;
+    
+  }
+
+  .about-image{
+    /*Your code here */
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 2;
+    max-height: 700px;
+    overflow: hidden; 
+  }
+  .about{
+    /*Your code here */
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 2;  
+  }
+  header p{
+    color: white;
+    font-size: 40px;
+    padding: 0 100px;
+    text-align: center;
+    font-family: 'Champagne & Limousines';
+  }
+  .skip a{
+    background-color: #f76d6d;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top:0px;
+    z-index: auto;
+  }
+  .header-image{
+    position: absolute;
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+    top: 15px;
+    z-index: 0;
+  
+    animation-name: bounce;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes bounce {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, 0px); }    
+  }
+  
+ 
+}  
